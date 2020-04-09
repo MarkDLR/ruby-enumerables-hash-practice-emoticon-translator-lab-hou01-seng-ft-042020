@@ -3,7 +3,7 @@ require 'yaml'
 
 def load_library(yaml_file)
    library = YAML.load_file(yaml_file)
-  file =library.reduce({}) do |memo, (key, value)|
+  file =library.each do |memo, (key, value)|
     puts memo[key] = {}
     puts key = value
     puts value
