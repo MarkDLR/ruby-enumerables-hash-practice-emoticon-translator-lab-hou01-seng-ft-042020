@@ -2,9 +2,9 @@
 require 'yaml'
 
 def load_library(yaml_file)
-   library = YAML.load_file(yaml_file)
+   emoticons = YAML.load_file(yaml_file)
    hash = {}
-   library.each do |key, value|
+   emoticons.each do |key, value|
     hash[key] = {}
     hash[key][:japanese] = value[1]
     hash[key][:english] = value[0]
