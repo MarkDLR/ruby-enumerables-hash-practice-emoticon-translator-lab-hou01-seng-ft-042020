@@ -2,14 +2,14 @@
 require 'yaml'
 
 def load_library(yaml_file)
-  library = YAML.load_file(yaml_file)
-  library.reduce({}) do |memo, (key, value)|
-    puts memo[key] = {value}
-    puts key
+   library = YAML.load_file(yaml_file)
+  file =library.reduce({}) do |memo, (key, value)|
+    puts memo[key] = {}
+    puts key = value
     puts value
     memo
   end
-  
+  file
 end
 
 def get_japanese_emoticon(yaml_file, emoticon)
