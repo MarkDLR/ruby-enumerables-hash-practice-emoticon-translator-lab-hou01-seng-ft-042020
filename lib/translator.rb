@@ -8,9 +8,8 @@ def load_library(yaml_file)
     hash[key] = {}
     hash[key][:japanese] = value[0]
     hash[key][:english] = value[1]
-    memo
   end
-  file
+  hash
 end
 
 def get_japanese_emoticon(yaml_file, emoticon)
