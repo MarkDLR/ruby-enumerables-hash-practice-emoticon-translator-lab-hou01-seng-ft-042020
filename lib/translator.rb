@@ -3,10 +3,11 @@ require 'yaml'
 
 def load_library(yaml_file)
    library = YAML.load_file(yaml_file)
-  file =library.each do |memo, (key, value)|
-    puts memo[key] = {}
-    puts key = value
-    puts value
+   hash = {}
+   library.each do |key, value|
+    hash[key] = {}
+    hash[key][:japanese] = value[0]
+    hash[key][:english] = value[1]
     memo
   end
   file
