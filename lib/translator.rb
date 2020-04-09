@@ -12,16 +12,16 @@ def load_library(yaml_file)
   hash
 end
 
-def get_japanese_emoticon(file_path, emoticon)
-  library = load_library(file_path)
+def get_japanese_emoticon(yaml_file, emoticon)
+  library = load_library(yaml_file)
   emoticon = library.keys.find do |key|
     library[key][:english] == emoticon
   end
   emoticon ? library[emoticon][:japanese] : "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning(file_path, emoticon)
-  library = load_library(file_path)
+def get_english_meaning(yaml_file, emoticon)
+  library = load_library(yaml_file)
   emoticon = library.keys.find do |key|
     library[key][:japanese] == emoticon
   end
