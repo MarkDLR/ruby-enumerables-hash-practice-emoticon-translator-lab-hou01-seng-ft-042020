@@ -6,8 +6,8 @@ def load_library(yaml_file)
    hash = {}
    library.each do |key, value|
     hash[key] = {}
-    hash[key][:japanese] = value[0]
-    hash[key][:english] = value[1]
+    hash[key][:japanese] = value[1]
+    hash[key][:english] = value[0]
   end
   hash
 end
