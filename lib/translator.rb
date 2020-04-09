@@ -12,8 +12,8 @@ def load_library(yaml_file)
   hash
 end
 
-def get_japanese_emoticon(yaml_file, emoticon)
-  library = load_library(yaml_file)
+def get_japanese_emoticon(file_path, emoticon)
+  library = load_library(file_path)
   emoticon = library.keys.find do |key|
     library[key][:english] == emoticon
   end
